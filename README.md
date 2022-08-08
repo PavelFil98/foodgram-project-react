@@ -1,4 +1,10 @@
 # praktikum_new_diplom
+
+http://158.160.8.78/signup
+
+админка : password:admin email:admin@gmail.com username:admin
+
+
 # Запуск и работа с проектом
 Чтобы развернуть проект, вам потребуется:
 1) Клонировать репозиторий GitHub
