@@ -28,6 +28,9 @@ To run this project, you will need to install [Docker](https://docs.docker.com/e
 1. Clone this repository to your local machine.
 2. In the root directory, create a file called `.env` and set the following environment variables:
 3. Run the following command in the root directory to start the containers:
+```bash
+docker-compose up
+```
 4. Once the containers are running, open your browser and go to `http://localhost`.
 
 ## Usage
