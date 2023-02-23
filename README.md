@@ -1,42 +1,49 @@
-# Foodgram - «Продуктовый помощник»
+# Foodgram Project
 
-Это некоммерческий онлайн-сервис и API для него. На этом сервисе пользователи могут публиковать рецепты, подписываться на публикации других пользователей, добавлять понравившиеся рецепты в список «Избранное», а перед походом в магазин скачивать сводный список продуктов, необходимых для приготовления одного или нескольких выбранных блюд.
+## Table of Contents
+* [Description](#description)
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Usage](#usage)
+* [API Documentation](#api-documentation)
+* [Contributing](#contributing)
+* [License](#license)
 
-## Стек технологий
+## Description
+Foodgram is a web application that allows users to create, share, and browse recipes. Users can also add ingredients to a shopping list and print the list out for use at the grocery store. The project was created for the Yandex.Practicum Python Developer course and is based on the Django framework.
 
-[![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/-Django-464646?style=flat-square&logo=Django)](https://www.djangoproject.com/)
-[![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat-square&logo=Django%20REST%20Framework)](https://www.django-rest-framework.org/)
-[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-464646?style=flat-square&logo=PostgreSQL)](https://www.postgresql.org/)
-[![Nginx](https://img.shields.io/badge/-NGINX-464646?style=flat-square&logo=NGINX)](https://nginx.org/ru/)
-[![gunicorn](https://img.shields.io/badge/-gunicorn-464646?style=flat-square&logo=gunicorn)](https://gunicorn.org/)
-[![docker](https://img.shields.io/badge/-Docker-464646?style=flat-square&logo=docker)](https://www.docker.com/)
-[![Yandex.Cloud](https://img.shields.io/badge/-Yandex.Cloud-464646?style=flat-square&logo=Yandex.Cloud)](https://cloud.yandex.ru/)
+## Technologies
+* Django
+* Django REST Framework
+* PostgreSQL
+* Nginx
+* Gunicorn
+* Docker
+* JavaScript
+* React
 
+## Installation
+To run this project, you will need to install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/). Once these are installed, follow these steps:
 
-# Запуск и работа с проектом
-Чтобы развернуть проект, вам потребуется:
-1) Клонировать репозиторий GitHub
-2) Создать файл ```.env``` в папке проекта _/infra/_ и заполнить его всеми ключами:
-```
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=postgres
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-DB_HOST=db
-DB_PORT=5432
-DJANGO_SECRET_KEY=<ваш_django_secret_key>
-```
-3) Собрать контейнеры:
-```python
-cd foodgram-project-react/infra
-docker-compose up -d --build
-```
-4) Сделать миграции, собрать статику и создать суперпользователя:
-```python
-docker-compose exec -T web python manage.py makemigrations users --noinput
-docker-compose exec -T web python manage.py makemigrations recipes --noinput
-docker-compose exec -T web python manage.py migrate --noinput
-docker-compose exec -T web python manage.py collectstatic --no-input
-docker-compose exec web python manage.py createsuperuser
-```
+1. Clone this repository to your local machine.
+2. In the root directory, create a file called `.env` and set the following environment variables:
+3. Run the following command in the root directory to start the containers:
+4. Once the containers are running, open your browser and go to `http://localhost`.
+
+## Usage
+After following the installation steps, you can use the application to:
+
+* Create an account
+* Browse recipes
+* Create, edit, and delete your own recipes
+* Add ingredients to your shopping list
+* Print your shopping list
+
+## API Documentation
+The Foodgram API documentation is available at `http://localhost/api/docs/` once the containers are running.
+
+## Contributing
+Contributions to this project are welcome! If you find a bug or would like to suggest a new feature, please open an issue. Pull requests are also welcome.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
